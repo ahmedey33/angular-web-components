@@ -6,6 +6,10 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
+    "app-demo1:js": "ng build --configuration production --output-hashing=none --base-href=http://localhost:9010/ --project=app-demo1 && node ./app-demo1.js",
+    "app-demo2:js": "ng build --configuration production --output-hashing=none --project=app-demo2 && node ./app-demo2.js",
+    "http-server-app-demo1": "cd dist/app-demo1 && http-server -p 9010 --cors=\"*\"",
+    "http-server-app-demo2": "cd dist/app-demo2 && http-server -p 9011 --cors=\"*\"",
     "test": "ng test"
   },
   "private": true,
@@ -14,10 +18,14 @@
     "@angular/common": "~12.2.0",
     "@angular/compiler": "~12.2.0",
     "@angular/core": "~12.2.0",
+    "@angular/elements": "^12.1.1",
     "@angular/forms": "~12.2.0",
     "@angular/platform-browser": "~12.2.0",
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
+    "concat": "^1.0.3",
+    "document-register-element": "^1.7.2",
+    "http-server": "^14.0.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
@@ -34,6 +42,7 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
+    "ng-packagr": "^12.1.1",
     "typescript": "~4.3.5"
   }
 }

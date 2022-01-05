@@ -3,6 +3,12 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.8.
 
 ## Development server
+### 1) Build the first web component `ng build --configuration production --output-hashing=none --project=app-demo1 && node ./app-demo1.js`
+### 2) Build the second web component `ng build --configuration production --output-hashing=none --project=app-demo2 && node ./app-demo2.js`
+### 3) Run the first webcomponents in http server `cd dist/app-demo1 && http-server -p 9010 --cors=\"*\"`
+### 4) Run the first webcomponents in http server `cd dist/app-demo1 && http-server -p 9010 --cors=\"*\"`
+### 5) Run the main angular application `ng serve`
+
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
